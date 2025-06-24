@@ -1,22 +1,90 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Podcast Production Assistant
+
+A Next.js application that leverages the Model Context Protocol (MCP) to automate podcast production workflows. This tool helps podcast creators generate show notes and identify viral social media clips from their transcripts using AI.
+
+## Features
+
+### 🎙️ AI-Powered Show Notes Generation
+- Automatically generates comprehensive show notes from podcast transcripts
+- Extracts key topics and discussion points
+- Identifies and links any resources or URLs mentioned during the episode
+- Creates professional summaries suitable for podcast platforms
+
+### 🎬 Viral Clip Discovery
+- Analyzes transcripts to find engaging, shareable content
+- Generates catchy, viral-style titles for social media clips
+- Identifies powerful quotes and soundbites perfect for short-form content
+- Helps maximize content reach across social platforms
+
+### 🔧 MCP Protocol Integration
+- Built on the Model Context Protocol for secure AI interactions
+- Simulates MCP client-server architecture
+- Demonstrates how MCP can be used for content production workflows
+- Structured JSON responses for reliable data processing
+
+## How It Works
+
+1. **Transcript Input**: Paste your podcast transcript or load the demo transcript
+2. **AI Processing**: The MCP server constructs detailed prompts and calls AI APIs
+3. **Asset Generation**: Receive structured show notes and clip suggestions
+4. **Review & Export**: Review generated content and use it for your production workflow
+
+## Technology Stack
+
+- **Frontend**: Next.js 15 with React 19
+- **AI Integration**: Google Gemini 2.0 Flash API
+- **Protocol**: Model Context Protocol (MCP) simulation
+- **Language**: TypeScript
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+- Node.js 18+
+- npm, yarn, pnpm, or bun
 
+### Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <repository-url>
+cd podcast-production-assistant
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Set up your AI API key:
+   - Get a Google Gemini API key from [Google AI Studio](https://makersuite.google.com/app/apikey)
+   - Add it to the `apiKey` variable in `src/Components/Dashboard/Dashboard.tsx`
+
+4. Run the development server:
+```bash
+npm run dev
+```
+
+5. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+## Usage
+
+1. **Load Transcript**: Either paste your own transcript or click "Load a Demo Transcript" to see the app in action
+2. **Generate Assets**: Click either "Generate Show Notes" or "Find Social Media Clips"
+3. **Review Results**: Examine the AI-generated content in the structured format
+4. **Export**: Copy the generated content for use in your podcast production workflow
+
+## MCP Architecture
+
+This application demonstrates MCP (Model Context Protocol) concepts:
+
+- **MCP Client**: The React frontend that users interact with
+- **MCP Server**: Simulated server that handles AI tool requests
+- **Tools**: Two main tools (`generateShowNotes` and `findInterestingClips`)
+- **Structured Responses**: JSON schema validation for reliable data exchange
+
+## Development
+
+### Project Structure
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
